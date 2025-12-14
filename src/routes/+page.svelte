@@ -2,42 +2,42 @@
   import Header from "$lib/components/Header.svelte";
   import Section from "$lib/components/Section.svelte";
   
-  const disciplines = [
-    "Architecture",
-    "Landscape Architecture",
-    "Interior Architecture",
-    "Product Design",
-    "Brand & Experience"
+  const services = [
+    "Direct Factory Oversight",
+    "Global Manufacturing Networks",
+    "Cost Optimization & Transparency",
+    "High-Volume Distribution",
+    "Quality Control Systems"
   ];
 
-  const news = [
+  const caseStudies = [
     {
-      date: "08 December 2025",
-      title: "The Joslyn Art Museum receives Prix Versailles World Title for Exterior Design",
-      image: "https://images.unsplash.com/photo-1629904853716-f004320d874c?q=80&w=1000&auto=format&fit=crop"
+      date: "Case Study",
+      title: "Hat Brand: Removed supply-chain leakages and upgraded quality while moving 100,000+ units monthly",
+      image: "/generated/image-stacks-of-packaged-apparel-products-read-1765747104525-3.webp"
     },
     {
-      date: "03 December 2025",
-      title: "La Nube wins Children in Museums International Award",
-      image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1000&auto=format&fit=crop"
+      date: "Case Study",
+      title: "Global Athletic Brand: Beat cost targets and improved quality while expanding multi-country distribution",
+      image: "/generated/image-modern-apparel-factory-floor-with-worker-1765747098036-0.webp"
     },
     {
-      date: "03 December 2025",
-      title: "Joslyn Museum of Art Expansion Receives Top Awards",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
+      date: "Distribution Excellence",
+      title: "Top-tier performance across eBay, Whatnot, StockX (top seller), and TikTok Shop (sub-60 ranking)",
+      image: "/generated/image-warehouse-distribution-center-with-organ-1765747100363-1.webp"
     }
   ];
 
-  const projects = [
-    { name: "Bibliotheca Alexandrina", desc: "A Library for the World", highlight: true },
-    { name: "Norwegian National Opera and Ballet", desc: "", highlight: true },
-    { name: "National September 11 Memorial Museum", desc: "", highlight: true },
-    { name: "Times Square", desc: "Putting the “square” back", highlight: false },
-    { name: "Viewpoint Snøhetta", desc: "The Norwegian Wild Reindeer", highlight: false },
-    { name: "Lascaux IV", desc: "International Centre for Cave Art", highlight: false },
-    { name: "Under", desc: "Europe's First Underwater Restaurant", highlight: false },
-    { name: "Powerhouse Brattørkaia", desc: "The northernmost energy-positive building", highlight: false },
-    { name: "King Abdulaziz Centre for World Culture", desc: "", highlight: true }
+  const results = [
+    { name: "100,000+ Units Monthly", desc: "Managed for hat brand with improved quality", highlight: true },
+    { name: "Multi-Country Distribution", desc: "Expanded for global athletic brand", highlight: true },
+    { name: "Top Seller on StockX", desc: "Proven high-volume distribution capability", highlight: true },
+    { name: "Sub-60 Ranking TikTok Shop", desc: "Elite marketplace performance", highlight: false },
+    { name: "Thousands of Reviews on eBay", desc: "Established seller reputation", highlight: false },
+    { name: "Top-Tier Whatnot Performance", desc: "Live commerce excellence", highlight: false },
+    { name: "Direct Factory Networks", desc: "Built through years of hands-on relationships", highlight: false },
+    { name: "Cost Reduction \& Quality Improvement", desc: "Simultaneous achievement for global brands", highlight: false },
+    { name: "Supply Chain Leak Prevention", desc: "Controlled production oversight systems", highlight: true }
   ];
   let carousel: HTMLElement;
 
@@ -61,7 +61,7 @@
   <!-- Hero Headline -->
   <div class="mb-20 md:mb-32 max-w-5xl">
     <h1 class="text-4xl md:text-6xl lg:text-7xl leading-[1.1] font-normal tracking-tight">
-      Snøhetta is a global transdisciplinary practice, working on projects of all scales.
+      Predictable manufacturing and distribution through direct factory oversight and vetted channel networks.
     </h1>
   </div>
 
@@ -70,44 +70,44 @@
     <div bind:this={carousel} class="flex gap-4 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide px-5 md:px-10">
       <!-- Left Image (Partial) -->
       <div class="shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] snap-center opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop" alt="Project" class="w-full h-[400px] md:h-[600px] object-cover" />
+        <img src="/generated/image-warehouse-distribution-center-with-organ-1765747100363-1.webp" alt="Distribution Operations" class="w-full h-[400px] md:h-[600px] object-cover" />
       </div>
       
       <!-- Center Image (Main) -->
       <div class="shrink-0 w-[90vw] md:w-[70vw] lg:w-[50vw] snap-center relative">
-        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1600&auto=format&fit=crop" alt="St. Louis Symphony Orchestra" class="w-full h-[400px] md:h-[600px] object-cover" />
+        <img src="/generated/image-modern-apparel-factory-floor-with-worker-1765747098036-0.webp" alt="Factory Operations" class="w-full h-[400px] md:h-[600px] object-cover" />
         <div class="mt-4">
-          <h3 class="text-lg font-medium">St. Louis Symphony Orchestra</h3>
-          <p class="text-gray-500 text-lg">A facility to nurture the creative process</p>
+          <h3 class="text-lg font-medium">Direct Factory Oversight</h3>
+          <p class="text-gray-500 text-lg">Eliminating cost inflation through hands-on production management</p>
         </div>
       </div>
 
       <!-- Right Image (Partial) -->
       <div class="shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] snap-center opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" alt="Project" class="w-full h-[400px] md:h-[600px] object-cover" />
+        <img src="/generated/image-quality-inspector-examining-fabric-mater-1765747102486-2.webp" alt="Quality Control" class="w-full h-[400px] md:h-[600px] object-cover" />
       </div>
        <!-- Extra Image -->
        <div class="shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] snap-center opacity-50 grayscale transition-all hover:grayscale-0 hover:opacity-100">
-        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1600&auto=format&fit=crop" alt="Project" class="w-full h-[400px] md:h-[600px] object-cover" />
+        <img src="/generated/image-stacks-of-packaged-apparel-products-read-1765747104525-3.webp" alt="Fulfillment" class="w-full h-[400px] md:h-[600px] object-cover" />
       </div>
     </div>
   </div>
 
-  <!-- Disciplines -->
-  <Section label="Disciplines">
+  <!-- Services -->
+  <Section label="Our Services">
     <div class="flex flex-col border-t border-gray-200">
-      {#each disciplines as discipline}
+      {#each services as service}
         <a href="/" class="py-6 border-b border-gray-200 text-3xl md:text-4xl lg:text-5xl font-normal hover:text-gray-500 transition-colors block">
-          {discipline}
+          {service}
         </a>
       {/each}
     </div>
   </Section>
 
-  <!-- Latest News -->
-  <Section label="Latest News" link="/" linkText="All articles">
+  <!-- Case Studies -->
+  <Section label="Proven Results" link="/" linkText="View all case studies">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {#each news as item}
+      {#each caseStudies as item}
         <article class="group cursor-pointer">
           <div class="overflow-hidden mb-4">
             <img src={item.image} alt={item.title} class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -133,65 +133,55 @@
     </div>
   </Section>
 
-  <!-- Process & Sustainability -->
+  <!-- Our Approach -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 py-20 md:py-32">
     <div>
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Our process" class="w-full aspect-[4/3] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Our process</h3>
+      <img src="/generated/image-business-partners-reviewing-production-d-1765747106701-4.webp" alt="Direct Partnership" class="w-full aspect-[4/3] object-cover mb-6" />
+      <h3 class="text-xl font-medium mb-2">Direct Factory Relationships</h3>
       <p class="text-gray-500 text-lg leading-relaxed">
-        Our unique process has been fine-tuned since our beginnings in 1989. Learn more about our transdisciplinary approach to architecture and design.
+        Built through years of hands-on experience, our factory networks eliminate intermediaries and cost inflation. We provide direct oversight of production lifecycles, ensuring quality and preventing leaks.
       </p>
     </div>
     <div>
-      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" alt="Sustainability" class="w-full aspect-[4/3] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Sustainability and Responsibility</h3>
+      <img src="/generated/image-global-shipping-containers-at-port-inter-1765747108784-5.webp" alt="Global Network" class="w-full aspect-[4/3] object-cover mb-6" />
+      <h3 class="text-xl font-medium mb-2">Proven Distribution Channels</h3>
       <p class="text-gray-500 text-lg leading-relaxed">
-        Since our founding in the late 1980s, we have been guided by a deep commitment to environmental and cultural sensitivity.
+        From high-volume marketplace performance to discreet liquidation routes, our vetted distribution networks move product efficiently. Top-tier rankings across eBay, StockX, Whatnot, and TikTok Shop demonstrate our execution capability.
       </p>
     </div>
   </div>
 
-  <!-- Highlighted Projects -->
-  <Section label="Highlighted Projects">
+  <!-- Key Results -->
+  <Section label="Track Record">
     <div class="flex flex-col gap-2">
-      {#each projects as project}
+      {#each results as result}
         <a href="/" class="group block">
           <h3 class="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
-            <span class="group-hover:underline decoration-1 underline-offset-8">{project.name}</span>
-            {#if project.desc}
-              <span class="text-gray-300 ml-2 group-hover:text-gray-400 transition-colors">{project.desc}</span>
+            <span class="group-hover:underline decoration-1 underline-offset-8">{result.name}</span>
+            {#if result.desc}
+              <span class="text-gray-300 ml-2 group-hover:text-gray-400 transition-colors">{result.desc}</span>
             {/if}
           </h3>
         </a>
       {/each}
       
       <a href="/" class="inline-flex items-center gap-2 text-lg text-gray-500 mt-12 hover:text-black transition-colors group">
-        → <span class="group-hover:translate-x-1 transition-transform">See all of our projects</span>
+        → <span class="group-hover:translate-x-1 transition-transform">Learn more about our approach</span>
       </a>
     </div>
   </Section>
 
   <!-- Get in touch -->
-  <div class="py-20 md:py-32">
+  <div id="contact" class="py-20 md:py-32">
     <div class="max-w-xl">
-      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Get in touch" class="w-full aspect-[3/2] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Get in touch</h3>
+      <img src="/generated/image-two-confident-business-founders-in-casua-1765747110893-6.webp" alt="Gabe Gorman and Jacob Canner" class="w-full aspect-[3/2] object-cover mb-6" />
+      <h3 class="text-xl font-medium mb-2">Work with the founding partners</h3>
       <p class="text-gray-500 text-lg mb-6">
-        We'd love to hear from you. Depending on your inquiry, you'll find the relevant contact details here.
+        Gabe Gorman and Jacob Canner bring military discipline and high-volume distribution expertise to solve manufacturing and supply chain challenges. Reach out to discuss how we can optimize your production and distribution.
       </p>
-      <button class="w-10 h-10 border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-colors">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="4" y1="21" x2="4" y2="14"></line>
-          <line x1="4" y1="10" x2="4" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12" y2="3"></line>
-          <line x1="20" y1="21" x2="20" y2="16"></line>
-          <line x1="20" y1="12" x2="20" y2="3"></line>
-          <line x1="1" y1="14" x2="7" y2="14"></line>
-          <line x1="9" y1="8" x2="15" y2="8"></line>
-          <line x1="17" y1="16" x2="23" y2="16"></line>
-        </svg>
-      </button>
+      <a href="mailto:contact@cgoperatinggroup.com" class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 hover:bg-black hover:text-white transition-colors text-sm font-medium">
+        Get in Touch →
+      </a>
     </div>
   </div>
 
@@ -199,75 +189,73 @@
   <footer class="pt-20 border-t border-gray-200">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-4">
       <!-- Logo Column -->
-      <div class="col-span-1 md:col-span-2">
-        <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 28L10 12L16 24L22 8L30 28" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <div class="col-span-1 md:col-span-3">
+        <svg class="w-12 h-12 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.0473 17.8386L5.69453 18.9586V18.9601H18.3003L18.9314 17.84H6.34063L6.82626 16.9993H19.4308L20.078 15.8807H7.47237L7.95715 15.0414H16.0358L16.0366 15.0429L16.0375 15.0414H20.5603L20.5612 15.0429L21.2084 13.9228L21.208 13.922L21.2084 13.9213H21.2075L14.9084 3.00677L14.9106 3.00296L14.9062 3.00296L13.6177 3.00296L5.0473 17.8386ZM14.261 4.12767L13.7751 4.96887L18.9438 13.9213H19.9139L14.261 4.12767ZM13.1286 6.08808L12.6467 6.9225L16.6749 13.9006L16.6634 13.9213H17.6511L13.1286 6.08808ZM11.9999 8.04225L8.60411 13.9213H15.3899L11.9999 8.04225ZM6.99833 3.30006C7.33866 3.10343 7.7248 2.99993 8.11786 3L2.30033 13.0776C2.10357 12.7371 2 12.3508 2 11.9575C2 11.5643 2.10357 11.178 2.30033 10.8375L6.17916 4.12006C6.37543 3.77951 6.65798 3.49669 6.99833 3.30006ZM9.08869 3H10.3816L3.43223 15.0384L2.785 13.9184L9.08869 3ZM11.3509 3H12.6424L4.56262 16.9963L3.91691 15.8777L11.3509 3ZM21.7064 13.0598C21.8988 12.7254 22 12.3463 22 11.9605C22 11.5746 21.8988 11.1956 21.7064 10.8611L17.8039 4.10233C17.6108 3.7681 17.3331 3.49057 16.9987 3.2976C16.6644 3.10463 16.2852 3.00302 15.8992 3.00296H15.8741L21.6931 13.082L21.7064 13.0598ZM17.7995 19.7994H6.17916C6.37472 20.1412 6.65692 20.4253 6.99728 20.6232C7.33763 20.8212 7.72414 20.9258 8.11786 20.9269H15.8829C16.2737 20.9261 16.6572 20.8212 16.994 20.6231C17.3309 20.4249 17.6089 20.1406 17.7995 19.7994Z"
+            fill="currentColor"
+          />
         </svg>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Predictable manufacturing and distribution for apparel brands.
+        </p>
       </div>
 
       <!-- Links Columns -->
       <div class="col-span-1 md:col-span-2">
-        <h4 class="text-gray-400 mb-6 text-sm">General</h4>
+        <h4 class="text-gray-400 mb-6 text-sm">Company</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="/" class="hover:text-black">People</a></li>
-          <li><a href="/" class="hover:text-black">Process</a></li>
-          <li><a href="/" class="hover:text-black">Projects</a></li>
-          <li><a href="/" class="hover:text-black">News</a></li>
+          <li><a href="#contact" class="hover:text-black">Contact</a></li>
           <li><a href="/" class="hover:text-black">About</a></li>
-          <li><a href="/" class="hover:text-black">Sustainability</a></li>
-          <li><a href="/" class="hover:text-black">Perspectives</a></li>
-          <li><a href="/" class="hover:text-black">Contact</a></li>
-          <li><a href="/" class="hover:text-black">Studios</a></li>
+          <li><a href="/" class="hover:text-black">Founders</a></li>
+          <li><a href="/" class="hover:text-black">Case Studies</a></li>
+          <li><a href="/" class="hover:text-black">Approach</a></li>
         </ul>
       </div>
 
       <div class="col-span-1 md:col-span-2">
-        <h4 class="text-gray-400 mb-6 text-sm">Disciplines</h4>
+        <h4 class="text-gray-400 mb-6 text-sm">Services</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="/" class="hover:text-black">Architecture</a></li>
-          <li><a href="/" class="hover:text-black">Landscape</a></li>
-          <li><a href="/" class="hover:text-black">Interior</a></li>
-          <li><a href="/" class="hover:text-black">Product</a></li>
-          <li><a href="/" class="hover:text-black">Brand & Experience</a></li>
+          <li><a href="/" class="hover:text-black">Factory Oversight</a></li>
+          <li><a href="/" class="hover:text-black">Manufacturing Networks</a></li>
+          <li><a href="/" class="hover:text-black">Cost Optimization</a></li>
+          <li><a href="/" class="hover:text-black">Distribution Channels</a></li>
+          <li><a href="/" class="hover:text-black">Quality Control</a></li>
         </ul>
       </div>
 
       <div class="col-span-1 md:col-span-2">
-        <h4 class="text-gray-400 mb-6 text-sm">More</h4>
+        <h4 class="text-gray-400 mb-6 text-sm">Industries</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="/" class="hover:text-black">Calendar</a></li>
-          <li><a href="/" class="hover:text-black">Awards</a></li>
-          <li><a href="/" class="hover:text-black">Snøhetta Books</a></li>
+          <li><a href="/" class="hover:text-black">Apparel Brands</a></li>
+          <li><a href="/" class="hover:text-black">Footwear</a></li>
+          <li><a href="/" class="hover:text-black">Accessories</a></li>
         </ul>
       </div>
 
-      <!-- Search -->
-      <div class="col-span-1 md:col-span-4 flex flex-col justify-end">
-        <div class="border-b border-gray-200 flex justify-between items-center py-2">
-          <input type="text" placeholder="Search" class="outline-none w-full text-sm placeholder-gray-400" />
-          <span class="text-gray-400">+</span>
+      <!-- Contact -->
+      <div class="col-span-1 md:col-span-3 flex flex-col justify-end">
+        <div class="text-sm text-gray-600">
+          <p class="mb-2 font-medium text-gray-800">Get in Touch</p>
+          <a href="mailto:contact@cgoperatinggroup.com" class="hover:text-black block mb-1">contact@cgoperatinggroup.com</a>
         </div>
       </div>
     </div>
 
     <!-- Bottom Footer -->
     <div class="mt-20 py-8 flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-gray-500 gap-4">
-      <div>© Snøhetta 2025</div>
-      
-      <a href="/" class="flex items-center gap-1 hover:text-black">
-        ↗ Current Openings
-      </a>
+      <div>Copyright © 2025 CG Operating Group</div>
 
       <div class="flex gap-6">
-        <a href="/" class="hover:text-black">Transparency Act</a>
-        <a href="/" class="hover:text-black">Cookies & Tracking</a>
-        <a href="/" class="hover:text-black">Legal Documents</a>
+        <a href="/" class="hover:text-black">Privacy Policy</a>
+        <a href="/" class="hover:text-black">Terms of Service</a>
       </div>
 
       <div class="flex gap-6">
-        <a href="/" class="hover:text-black">Instagram</a>
-        <a href="/" class="hover:text-black">Facebook</a>
         <a href="/" class="hover:text-black">LinkedIn</a>
+        <a href="/" class="hover:text-black">Twitter</a>
       </div>
     </div>
   </footer>
