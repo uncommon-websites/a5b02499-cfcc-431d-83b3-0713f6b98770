@@ -11,7 +11,7 @@
   <div class="w-full md:w-3/4">
     {#if link}
       <div class="flex justify-end mb-12 -mt-12 md:mt-0">
-        <a href={link} class="text-base text-gray-400 hover:text-blue-700 transition-colors duration-300 flex items-center gap-2 group font-light">
+        <a href={link} class="text-base text-gray-400 hover:text-teal transition-colors duration-300 flex items-center gap-2 group font-light">
           {linkText}
           <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
         </a>

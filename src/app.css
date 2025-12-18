@@ -1,5 +1,49 @@
 @import "tailwindcss";
 
+@theme {
+  /* Primary Colors from Logo - EXACT */
+  --color-navy: #13233F;
+  --color-teal: #3E6363;
+
+  /* Navy shades */
+  --color-navy-50: #f0f2f5;
+  --color-navy-100: #e0e4eb;
+  --color-navy-200: #c1c9d6;
+  --color-navy-300: #8d9ab3;
+  --color-navy-400: #5a6b8a;
+  --color-navy-500: #2d3f5c;
+  --color-navy-600: #1a2d4d;
+  --color-navy-700: #13233F;
+  --color-navy-800: #0f1c32;
+  --color-navy-900: #0a1322;
+
+  /* Teal shades */
+  --color-teal-50: #f3f6f6;
+  --color-teal-100: #e5eded;
+  --color-teal-200: #c7d8d8;
+  --color-teal-300: #9ababa;
+  --color-teal-400: #6d9999;
+  --color-teal-500: #4f7979;
+  --color-teal-600: #3E6363;
+  --color-teal-700: #335252;
+  --color-teal-800: #284040;
+  --color-teal-900: #1d2e2e;
+}
+
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-teal);
+  color: white;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
