@@ -64,7 +64,7 @@
       The system that works so you don't have to.
     </h1>
     <p class="text-xl md:text-2xl text-gray-500 mt-8 max-w-3xl font-light leading-relaxed">
-      Predictable operations. Direct factory networks. Proven marketplace performance.
+      Global manufacturing.
     </p>
   </div>
 
