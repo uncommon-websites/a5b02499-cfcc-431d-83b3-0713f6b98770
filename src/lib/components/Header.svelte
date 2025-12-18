@@ -12,9 +12,9 @@
   });
 </script>
 
-<header class="fixed top-0 left-0 w-full z-50 px-5 py-6 md:px-10 md:py-8 flex justify-between items-start bg-white/90 backdrop-blur-sm transition-all duration-300 text-black">
-  <a href="/" class="flex items-center gap-3 z-10 group">
-    <svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<header class="fixed top-0 left-0 w-full z-50 px-6 py-8 md:px-16 lg:px-24 md:py-10 flex justify-between items-start bg-white/95 backdrop-blur-md transition-all duration-500 text-black border-b border-slate-100">
+  <a href="/" class="flex items-center gap-4 z-10 group">
+    <svg class="w-9 h-9 md:w-11 md:h-11 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -22,14 +22,14 @@
         fill="currentColor"
       />
     </svg>
-    <span class="text-xl md:text-2xl font-normal tracking-wide">CG Operating Group</span>
+    <span class="text-xl md:text-2xl font-light tracking-tight text-gray-900">CG Operating Group</span>
   </a>
   
-  <button class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 text-lg font-normal hover:text-blue-600 transition-colors z-10">
+  <button class="absolute left-1/2 -translate-x-1/2 top-8 md:top-10 text-base md:text-lg font-light hover:text-blue-700 transition-colors duration-300 z-10">
     Menu
   </button>
 
-  <a href="#contact" class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 transition-colors z-10 text-sm md:text-base font-normal">
+  <a href="#contact" class="px-6 py-3 bg-blue-700 text-white hover:bg-blue-800 transition-all duration-300 z-10 text-sm md:text-base font-normal tracking-wide">
     Contact
   </a>
 </header>
