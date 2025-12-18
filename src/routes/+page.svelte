@@ -61,7 +61,7 @@
   <!-- Hero Headline -->
   <div class="mb-32 md:mb-48 max-w-7xl">
     <h1 class="text-5xl md:text-7xl lg:text-8xl leading-[1.05] font-light tracking-[-0.02em] text-gray-900">
-      <span class="text-blue-700 font-normal">Manufacturing oversight</span> and <span class="text-slate-800 font-normal">high-volume distribution</span> for apparel brands operating at scale.
+      The system that works so you don't have to.
     </h1>
     <p class="text-xl md:text-2xl text-gray-500 mt-8 max-w-3xl font-light leading-relaxed">
       Predictable operations. Direct factory networks. Proven marketplace performance.
