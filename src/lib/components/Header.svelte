@@ -25,11 +25,11 @@
     <span class="text-xl md:text-2xl font-normal tracking-wide">CG Operating Group</span>
   </a>
   
-  <button class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 text-lg font-normal hover:opacity-70 transition-opacity z-10">
+  <button class="absolute left-1/2 -translate-x-1/2 top-6 md:top-8 text-lg font-normal hover:text-blue-600 transition-colors z-10">
     Menu
   </button>
 
-  <a href="#contact" class="hover:opacity-70 transition-opacity z-10 text-sm md:text-base font-normal">
+  <a href="#contact" class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 transition-colors z-10 text-sm md:text-base font-normal">
     Contact
   </a>
 </header>

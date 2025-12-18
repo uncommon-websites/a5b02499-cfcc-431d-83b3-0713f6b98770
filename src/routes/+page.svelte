@@ -61,7 +61,7 @@
   <!-- Hero Headline -->
   <div class="mb-20 md:mb-32 max-w-5xl">
     <h1 class="text-4xl md:text-6xl lg:text-7xl leading-[1.1] font-normal tracking-tight">
-      Manufacturing oversight and high-volume distribution for apparel brands who need predictable operations at scale.
+      <span class="text-blue-600">Manufacturing oversight</span> and <span class="text-emerald-600">high-volume distribution</span> for apparel brands who need predictable operations at scale.
     </h1>
   </div>
 
@@ -96,8 +96,11 @@
   <!-- Services -->
   <Section label="Our Services">
     <div class="flex flex-col border-t border-gray-200">
-      {#each services as service}
-        <a href="/" class="py-6 border-b border-gray-200 text-3xl md:text-4xl lg:text-5xl font-normal hover:text-gray-500 transition-colors block">
+      {#each services as service, i}
+        <a href="/" class={[
+          'py-6 border-b border-gray-200 text-3xl md:text-4xl lg:text-5xl font-normal transition-colors block',
+          service.startsWith('Manufacturing') ? 'hover:text-blue-600' : 'hover:text-emerald-600'
+        ]}>
           {service}
         </a>
       {/each}
@@ -112,7 +115,10 @@
           <div class="overflow-hidden mb-4">
             <img src={item.image} alt={item.title} class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <time class="text-gray-500 text-sm block mb-2">{item.date}</time>
+          <time class={[
+            'text-sm block mb-2 font-medium',
+            item.date.includes('Manufacturing') ? 'text-blue-600' : 'text-emerald-600'
+          ]}>{item.date}</time>
           <h3 class="text-xl leading-snug group-hover:underline decoration-1 underline-offset-4">{item.title}</h3>
         </article>
       {/each}
@@ -133,18 +139,58 @@
     </div>
   </Section>
 
+  <!-- Marketplace Trust Signals -->
+  <Section label="Proven Platforms">
+    <div class="bg-gradient-to-br from-blue-50 to-emerald-50 border border-blue-100 p-8 md:p-12">
+      <h3 class="text-2xl md:text-3xl font-normal mb-6">Top-tier performance across major marketplaces</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-gray-200 flex items-center justify-center mb-3">
+            <span class="text-2xl font-bold text-emerald-600">SX</span>
+          </div>
+          <p class="text-sm font-medium">StockX</p>
+          <p class="text-xs text-gray-500 mt-1">Top Seller</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-gray-200 flex items-center justify-center mb-3">
+            <span class="text-2xl font-bold text-blue-600">EB</span>
+          </div>
+          <p class="text-sm font-medium">eBay</p>
+          <p class="text-xs text-gray-500 mt-1">1000s of Reviews</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-gray-200 flex items-center justify-center mb-3">
+            <span class="text-2xl font-bold text-pink-600">TT</span>
+          </div>
+          <p class="text-sm font-medium">TikTok Shop</p>
+          <p class="text-xs text-gray-500 mt-1">Sub-60 Ranking</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-gray-200 flex items-center justify-center mb-3">
+            <span class="text-2xl font-bold text-purple-600">WN</span>
+          </div>
+          <p class="text-sm font-medium">Whatnot</p>
+          <p class="text-xs text-gray-500 mt-1">Top-Tier</p>
+        </div>
+      </div>
+      <p class="text-gray-600 text-lg">
+        Our distribution arm (Distrint) has proven high-volume fulfillment capabilities across the industry's most demanding platforms, providing brands with vetted channels for ongoing partnerships and discreet liquidation.
+      </p>
+    </div>
+  </Section>
+
   <!-- Our Approach -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 py-20 md:py-32">
-    <div>
+    <div class="border-l-4 border-blue-600 pl-6">
       <img src="/generated/image-business-partners-reviewing-production-d-1765747106701-4.webp" alt="Direct Partnership" class="w-full aspect-[4/3] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Manufacturing: Direct factory oversight</h3>
+      <h3 class="text-xl font-medium mb-2 text-blue-600">Manufacturing: Direct factory oversight</h3>
       <p class="text-gray-500 text-lg leading-relaxed">
         Built through years of hands-on sourcing experience, our factory networks eliminate intermediaries and cost inflation. We provide direct oversight of production lifecycles, ensuring quality control and preventing supply chain leaks that damage brand integrity.
       </p>
     </div>
-    <div>
+    <div class="border-l-4 border-emerald-600 pl-6">
       <img src="/generated/image-global-shipping-containers-at-port-inter-1765747108784-5.webp" alt="Global Network" class="w-full aspect-[4/3] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Distribution: Distrint's proven channels</h3>
+      <h3 class="text-xl font-medium mb-2 text-emerald-600">Distribution: Distrint's proven channels</h3>
       <p class="text-gray-500 text-lg leading-relaxed">
         Our distribution arm moves product at scale through vetted marketplace channels. From ongoing partnerships to discreet liquidation, we provide flexible fulfillment backed by top-tier performance on StockX, eBay, Whatnot, and TikTok Shop.
       </p>
@@ -157,7 +203,10 @@
       {#each results as result}
         <a href="/" class="group block">
           <h3 class="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
-            <span class="group-hover:underline decoration-1 underline-offset-8">{result.name}</span>
+            <span class={[
+              'group-hover:underline decoration-1 underline-offset-8',
+              result.highlight ? 'text-blue-600' : ''
+            ]}>{result.name}</span>
             {#if result.desc}
               <span class="text-gray-300 ml-2 group-hover:text-gray-400 transition-colors">{result.desc}</span>
             {/if}
@@ -165,7 +214,7 @@
         </a>
       {/each}
       
-      <a href="/" class="inline-flex items-center gap-2 text-lg text-gray-500 mt-12 hover:text-black transition-colors group">
+      <a href="/" class="inline-flex items-center gap-2 text-lg text-gray-500 mt-12 hover:text-blue-600 transition-colors group">
         → <span class="group-hover:translate-x-1 transition-transform">Learn more about our approach</span>
       </a>
     </div>
@@ -174,12 +223,17 @@
   <!-- Get in touch -->
   <div id="contact" class="py-20 md:py-32">
     <div class="max-w-xl">
-      <img src="/generated/image-two-confident-business-founders-in-casua-1765747110893-6.webp" alt="Gabe Gorman and Jacob Canner" class="w-full aspect-[3/2] object-cover mb-6" />
+      <img src="/generated/image-two-confident-business-founders-in-casua-1765747110893-6.webp" alt="Gabe Gorman and Jacob Canner" class="w-full aspect-[3/2] object-cover mb-6 border-4 border-blue-100" />
+      <div class="flex gap-3 mb-4">
+        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium">Military Discipline</span>
+        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium">StockX Top Seller</span>
+        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium">Factory Networks</span>
+      </div>
       <h3 class="text-xl font-medium mb-2">Work with the founding partners</h3>
       <p class="text-gray-500 text-lg mb-6">
-        Gabe Gorman built overseas factory networks through military discipline and large-scale sourcing. Jacob Canner scaled one of StockX's largest apparel pipelines and brings volume distribution expertise through Distrint. Together, they eliminate cost inflation and move product at scale.
+        <strong class="text-blue-600">Gabe Gorman</strong> built overseas factory networks through military discipline and large-scale sourcing. <strong class="text-emerald-600">Jacob Canner</strong> scaled one of StockX's largest apparel pipelines and brings volume distribution expertise through Distrint. Together, they eliminate cost inflation and move product at scale.
       </p>
-      <a href="mailto:contact@cgoperatinggroup.com" class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 hover:bg-black hover:text-white transition-colors text-sm font-medium">
+      <a href="mailto:contact@cgoperatinggroup.com" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium">
         Get in Touch →
       </a>
     </div>
@@ -207,31 +261,31 @@
       <div class="col-span-1 md:col-span-2">
         <h4 class="text-gray-400 mb-6 text-sm">Company</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="#contact" class="hover:text-black">Contact</a></li>
-          <li><a href="/" class="hover:text-black">About</a></li>
-          <li><a href="/" class="hover:text-black">Founders</a></li>
-          <li><a href="/" class="hover:text-black">Case Studies</a></li>
-          <li><a href="/" class="hover:text-black">Approach</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+          <li><a href="/" class="hover:text-blue-600">About</a></li>
+          <li><a href="/" class="hover:text-blue-600">Founders</a></li>
+          <li><a href="/" class="hover:text-blue-600">Case Studies</a></li>
+          <li><a href="/" class="hover:text-blue-600">Approach</a></li>
         </ul>
       </div>
 
       <div class="col-span-1 md:col-span-2">
         <h4 class="text-gray-400 mb-6 text-sm">Services</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="/" class="hover:text-black">Manufacturing Oversight</a></li>
-          <li><a href="/" class="hover:text-black">Factory Networks</a></li>
-          <li><a href="/" class="hover:text-black">Cost Optimization</a></li>
-          <li><a href="/" class="hover:text-black">Distribution (Distrint)</a></li>
-          <li><a href="/" class="hover:text-black">Marketplace Fulfillment</a></li>
+          <li><a href="/" class="hover:text-blue-600">Manufacturing Oversight</a></li>
+          <li><a href="/" class="hover:text-blue-600">Factory Networks</a></li>
+          <li><a href="/" class="hover:text-blue-600">Cost Optimization</a></li>
+          <li><a href="/" class="hover:text-emerald-600">Distribution (Distrint)</a></li>
+          <li><a href="/" class="hover:text-emerald-600">Marketplace Fulfillment</a></li>
         </ul>
       </div>
 
       <div class="col-span-1 md:col-span-2">
         <h4 class="text-gray-400 mb-6 text-sm">Industries</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="/" class="hover:text-black">Apparel Brands</a></li>
-          <li><a href="/" class="hover:text-black">Footwear</a></li>
-          <li><a href="/" class="hover:text-black">Accessories</a></li>
+          <li><a href="/" class="hover:text-blue-600">Apparel Brands</a></li>
+          <li><a href="/" class="hover:text-blue-600">Footwear</a></li>
+          <li><a href="/" class="hover:text-blue-600">Accessories</a></li>
         </ul>
       </div>
 
@@ -239,7 +293,7 @@
       <div class="col-span-1 md:col-span-3 flex flex-col justify-end">
         <div class="text-sm text-gray-600">
           <p class="mb-2 font-medium text-gray-800">Get in Touch</p>
-          <a href="mailto:contact@cgoperatinggroup.com" class="hover:text-black block mb-1">contact@cgoperatinggroup.com</a>
+          <a href="mailto:contact@cgoperatinggroup.com" class="hover:text-blue-600 block mb-1">contact@cgoperatinggroup.com</a>
         </div>
       </div>
     </div>
@@ -249,13 +303,13 @@
       <div>Copyright © 2025 CG Operating Group</div>
 
       <div class="flex gap-6">
-        <a href="/" class="hover:text-black">Privacy Policy</a>
-        <a href="/" class="hover:text-black">Terms of Service</a>
+        <a href="/" class="hover:text-blue-600">Privacy Policy</a>
+        <a href="/" class="hover:text-blue-600">Terms of Service</a>
       </div>
 
       <div class="flex gap-6">
-        <a href="/" class="hover:text-black">LinkedIn</a>
-        <a href="/" class="hover:text-black">Twitter</a>
+        <a href="/" class="hover:text-blue-600">LinkedIn</a>
+        <a href="/" class="hover:text-blue-600">Twitter</a>
       </div>
     </div>
   </footer>
