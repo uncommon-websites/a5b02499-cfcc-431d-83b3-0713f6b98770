@@ -3,41 +3,41 @@
   import Section from "$lib/components/Section.svelte";
   
   const services = [
-    "Direct Factory Oversight",
-    "Global Manufacturing Networks",
-    "Cost Optimization & Transparency",
-    "High-Volume Distribution",
-    "Quality Control Systems"
+    "Manufacturing: Direct factory oversight and quality control",
+    "Manufacturing: Global production networks and cost optimization",
+    "Distribution: High-volume marketplace operations (Distrint)",
+    "Distribution: Liquidation and inventory management",
+    "Distribution: Multi-channel fulfillment and logistics"
   ];
 
   const caseStudies = [
     {
-      date: "Case Study",
-      title: "Hat Brand: Removed supply-chain leakages and upgraded quality while moving 100,000+ units monthly",
+      date: "Manufacturing",
+      title: "Hat brand: Removed supply-chain leakages and upgraded quality while moving 100,000+ units monthly",
       image: "/generated/image-stacks-of-packaged-apparel-products-read-1765747104525-3.webp"
     },
     {
-      date: "Case Study",
-      title: "Global Athletic Brand: Beat cost targets and improved quality while expanding multi-country distribution",
+      date: "Manufacturing",
+      title: "Global athletic brand: Beat cost and improved quality while expanding multi-country distribution",
       image: "/generated/image-modern-apparel-factory-floor-with-worker-1765747098036-0.webp"
     },
     {
-      date: "Distribution Excellence",
-      title: "Top-tier performance across eBay, Whatnot, StockX (top seller), and TikTok Shop (sub-60 ranking)",
+      date: "Distribution (Distrint)",
+      title: "Scaled to top seller on StockX, sub-60 on TikTok Shop, thousands of reviews on eBay, top-tier on Whatnot",
       image: "/generated/image-warehouse-distribution-center-with-organ-1765747100363-1.webp"
     }
   ];
 
   const results = [
-    { name: "100,000+ Units Monthly", desc: "Managed for hat brand with improved quality", highlight: true },
-    { name: "Multi-Country Distribution", desc: "Expanded for global athletic brand", highlight: true },
-    { name: "Top Seller on StockX", desc: "Proven high-volume distribution capability", highlight: true },
-    { name: "Sub-60 Ranking TikTok Shop", desc: "Elite marketplace performance", highlight: false },
-    { name: "Thousands of Reviews on eBay", desc: "Established seller reputation", highlight: false },
-    { name: "Top-Tier Whatnot Performance", desc: "Live commerce excellence", highlight: false },
-    { name: "Direct Factory Networks", desc: "Built through years of hands-on relationships", highlight: false },
-    { name: "Cost Reduction \& Quality Improvement", desc: "Simultaneous achievement for global brands", highlight: false },
-    { name: "Supply Chain Leak Prevention", desc: "Controlled production oversight systems", highlight: true }
+    { name: "100,000+ Units Monthly", desc: "Hat brand manufacturing with upgraded quality", highlight: true },
+    { name: "Beat Cost & Improved Quality", desc: "Global athletic brand manufacturing", highlight: true },
+    { name: "Top Seller on StockX", desc: "Distrint distribution performance", highlight: true },
+    { name: "Sub-60 Ranking TikTok Shop", desc: "Elite marketplace distribution", highlight: false },
+    { name: "Thousands of Reviews on eBay", desc: "Proven Distrint seller reputation", highlight: false },
+    { name: "Top-Tier Whatnot Performance", desc: "Live commerce distribution excellence", highlight: false },
+    { name: "Direct Factory Networks", desc: "Built through hands-on sourcing experience", highlight: false },
+    { name: "Multi-Country Distribution", desc: "Expanded for global athletic brand", highlight: false },
+    { name: "Supply Chain Leak Prevention", desc: "Controlled production oversight", highlight: true }
   ];
   let carousel: HTMLElement;
 
@@ -61,7 +61,7 @@
   <!-- Hero Headline -->
   <div class="mb-20 md:mb-32 max-w-5xl">
     <h1 class="text-4xl md:text-6xl lg:text-7xl leading-[1.1] font-normal tracking-tight">
-      Predictable manufacturing and distribution through direct factory oversight and vetted channel networks.
+      Manufacturing oversight and high-volume distribution for apparel brands who need predictable operations at scale.
     </h1>
   </div>
 
@@ -137,16 +137,16 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 py-20 md:py-32">
     <div>
       <img src="/generated/image-business-partners-reviewing-production-d-1765747106701-4.webp" alt="Direct Partnership" class="w-full aspect-[4/3] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Direct Factory Relationships</h3>
+      <h3 class="text-xl font-medium mb-2">Manufacturing: Direct factory oversight</h3>
       <p class="text-gray-500 text-lg leading-relaxed">
-        Built through years of hands-on experience, our factory networks eliminate intermediaries and cost inflation. We provide direct oversight of production lifecycles, ensuring quality and preventing leaks.
+        Built through years of hands-on sourcing experience, our factory networks eliminate intermediaries and cost inflation. We provide direct oversight of production lifecycles, ensuring quality control and preventing supply chain leaks that damage brand integrity.
       </p>
     </div>
     <div>
       <img src="/generated/image-global-shipping-containers-at-port-inter-1765747108784-5.webp" alt="Global Network" class="w-full aspect-[4/3] object-cover mb-6" />
-      <h3 class="text-xl font-medium mb-2">Proven Distribution Channels</h3>
+      <h3 class="text-xl font-medium mb-2">Distribution: Distrint's proven channels</h3>
       <p class="text-gray-500 text-lg leading-relaxed">
-        From high-volume marketplace performance to discreet liquidation routes, our vetted distribution networks move product efficiently. Top-tier rankings across eBay, StockX, Whatnot, and TikTok Shop demonstrate our execution capability.
+        Our distribution arm moves product at scale through vetted marketplace channels. From ongoing partnerships to discreet liquidation, we provide flexible fulfillment backed by top-tier performance on StockX, eBay, Whatnot, and TikTok Shop.
       </p>
     </div>
   </div>
@@ -177,7 +177,7 @@
       <img src="/generated/image-two-confident-business-founders-in-casua-1765747110893-6.webp" alt="Gabe Gorman and Jacob Canner" class="w-full aspect-[3/2] object-cover mb-6" />
       <h3 class="text-xl font-medium mb-2">Work with the founding partners</h3>
       <p class="text-gray-500 text-lg mb-6">
-        Gabe Gorman and Jacob Canner bring military discipline and high-volume distribution expertise to solve manufacturing and supply chain challenges. Reach out to discuss how we can optimize your production and distribution.
+        Gabe Gorman built overseas factory networks through military discipline and large-scale sourcing. Jacob Canner scaled one of StockX's largest apparel pipelines and brings volume distribution expertise through Distrint. Together, they eliminate cost inflation and move product at scale.
       </p>
       <a href="mailto:contact@cgoperatinggroup.com" class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 hover:bg-black hover:text-white transition-colors text-sm font-medium">
         Get in Touch →
@@ -218,11 +218,11 @@
       <div class="col-span-1 md:col-span-2">
         <h4 class="text-gray-400 mb-6 text-sm">Services</h4>
         <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="/" class="hover:text-black">Factory Oversight</a></li>
-          <li><a href="/" class="hover:text-black">Manufacturing Networks</a></li>
+          <li><a href="/" class="hover:text-black">Manufacturing Oversight</a></li>
+          <li><a href="/" class="hover:text-black">Factory Networks</a></li>
           <li><a href="/" class="hover:text-black">Cost Optimization</a></li>
-          <li><a href="/" class="hover:text-black">Distribution Channels</a></li>
-          <li><a href="/" class="hover:text-black">Quality Control</a></li>
+          <li><a href="/" class="hover:text-black">Distribution (Distrint)</a></li>
+          <li><a href="/" class="hover:text-black">Marketplace Fulfillment</a></li>
         </ul>
       </div>
 
