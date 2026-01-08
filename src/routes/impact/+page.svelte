@@ -1,43 +1,5 @@
 <script lang="ts">
   import Header from "$lib/components/Header.svelte";
-
-  const impacts = [
-    {
-      number: "01",
-      text: "Scaled an eBay store past 10,000 reviews through consistent volume.",
-      type: "distribution"
-    },
-    {
-      number: "02",
-      text: "Performed in the top tier on Whatnot.",
-      type: "distribution"
-    },
-    {
-      number: "03",
-      text: "Ranked as the top apparel seller on StockX in 2024.",
-      type: "distribution"
-    },
-    {
-      number: "04",
-      text: "Ranked 52nd on TikTok Shop in October 2025.",
-      type: "distribution"
-    },
-    {
-      number: "05",
-      text: "Launched two DTC brands.",
-      type: "distribution"
-    },
-    {
-      number: "06",
-      text: "Cut a hat brand's production costs, removed supply-chain leakages, and upgraded quality for an operation moving over 100,000 units per month.",
-      type: "manufacturing"
-    },
-    {
-      number: "07",
-      text: "Improved manufacturing consistency and expanded multi-country distribution for a global athletic brand moving several million units per year.",
-      type: "both"
-    }
-  ];
 </script>
 
 <Header />
@@ -45,70 +7,140 @@
 <main class="pt-36 pb-0 font-sans text-navy">
 
   <!-- Hero -->
-  <div class="py-20 md:py-32">
+  <div class="py-16 md:py-24">
     <div class="px-6 md:px-16 lg:px-24 max-w-[1600px] mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-        <div class="lg:col-span-3">
-          <p class="text-xs tracking-widest uppercase text-gray-400 font-medium">Our Impact</p>
-        </div>
-        <div class="lg:col-span-9">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-gray-500 leading-[1.2] max-w-4xl">
-            Real transformations. Measurable results. Our work speaks for itself.
-          </h1>
-        </div>
+      <div class="max-w-4xl">
+        <p class="text-xs tracking-widest uppercase text-gray-400 font-medium mb-6">Our Impact</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-black leading-[1.15]">
+          Results that speak for themselves.
+        </h1>
+        <p class="mt-6 text-xl md:text-2xl text-gray-500 font-light leading-relaxed max-w-2xl">
+          We measure success by the tangible outcomes we deliver for our partners.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- Impact Items -->
+  <!-- Two Column Impact Sections -->
   <div class="border-t border-gray-100">
-    <div class="max-w-[1600px] mx-auto">
-      {#each impacts as impact, i}
-        <div
-          class="py-10 md:py-12 border-b border-gray-100 px-6 md:px-16 lg:px-24 -mx-0 transition-colors duration-150 cursor-default min-h-[160px] md:min-h-[180px] flex items-center {impact.type === 'manufacturing' ? 'hover:bg-navy hover:text-white' : impact.type === 'distribution' ? 'hover:bg-teal hover:text-white' : 'hover:bg-navy hover:text-white'} group"
-        >
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center w-full">
-            <div class="lg:col-span-2">
-              <span class="text-3xl md:text-4xl font-light transition-colors duration-150 {impact.type === 'manufacturing' ? 'text-navy group-hover:text-white' : impact.type === 'distribution' ? 'text-teal group-hover:text-white' : 'text-navy group-hover:text-white'}">
-                {impact.number}
-              </span>
+    <div class="px-6 md:px-16 lg:px-24 max-w-[1600px] mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+
+        <!-- Manufacturing Column -->
+        <div class="py-16 md:py-24 lg:pr-16 xl:pr-24 lg:border-r border-gray-100 flex flex-col">
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-3 h-3 bg-navy"></div>
+            <h2 class="text-xs tracking-widest uppercase text-navy font-medium">Manufacturing</h2>
+          </div>
+
+          <div class="space-y-8 flex-1">
+            <div class="group">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-1.5 h-1.5 bg-navy/40 rounded-full mt-3"></div>
+                <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                  Removed supply-chain leakages and upgraded quality for a hat brand moving <span class="text-navy font-normal">100,000+ units monthly</span>.
+                </p>
+              </div>
             </div>
-            <div class="lg:col-span-8">
-              <p class="text-xl md:text-2xl lg:text-3xl font-light text-navy leading-relaxed tracking-tight transition-colors duration-150 group-hover:text-white">
-                {impact.text}
-              </p>
+
+            <div class="group">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-1.5 h-1.5 bg-navy/40 rounded-full mt-3"></div>
+                <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                  Beat cost and improved quality for a <span class="text-navy font-normal">global athletic brand</span>, while expanding multi-country distribution.
+                </p>
+              </div>
             </div>
-            <div class="lg:col-span-2 flex justify-end">
-              <span class="text-xs tracking-widest uppercase font-medium whitespace-nowrap transition-colors duration-150 {impact.type === 'manufacturing' ? 'text-navy group-hover:text-white/70' : impact.type === 'distribution' ? 'text-teal group-hover:text-white/70' : 'text-gray-400 group-hover:text-white/70'}">
-                {impact.type === 'both' ? 'Mfg + Dist' : impact.type === 'manufacturing' ? 'Mfg' : 'Dist'}
-              </span>
+          </div>
+
+          <!-- Manufacturing Stats -->
+          <div class="mt-auto pt-10 border-t border-gray-100">
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <p class="text-4xl md:text-5xl font-light text-navy tracking-tight">100K+</p>
+                <p class="text-sm text-gray-500 mt-2 font-light">Units monthly</p>
+              </div>
+              <div>
+                <p class="text-4xl md:text-5xl font-light text-navy tracking-tight">Global</p>
+                <p class="text-sm text-gray-500 mt-2 font-light">Production reach</p>
+              </div>
             </div>
           </div>
         </div>
-      {/each}
+
+        <!-- Distribution Column -->
+        <div class="py-16 md:py-24 lg:pl-16 xl:pl-24 border-t lg:border-t-0 border-gray-100 flex flex-col">
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-3 h-3 bg-teal"></div>
+            <h2 class="text-xs tracking-widest uppercase text-teal font-medium">Distribution</h2>
+          </div>
+
+          <div class="space-y-8 flex-1">
+            <div class="group">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-1.5 h-1.5 bg-teal/40 rounded-full mt-3"></div>
+                <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                  Scaled an eBay store to <span class="text-teal font-normal">thousands of reviews</span>.
+                </p>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-1.5 h-1.5 bg-teal/40 rounded-full mt-3"></div>
+                <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                  Performed in the <span class="text-teal font-normal">top tier on Whatnot</span>.
+                </p>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-1.5 h-1.5 bg-teal/40 rounded-full mt-3"></div>
+                <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                  Ranked as a <span class="text-teal font-normal">top seller on StockX</span>.
+                </p>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-1.5 h-1.5 bg-teal/40 rounded-full mt-3"></div>
+                <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                  Ranked <span class="text-teal font-normal">sub 60 on TikTok Shop</span> globally.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Distribution Stats -->
+          <div class="mt-auto pt-10 border-t border-gray-100">
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <p class="text-4xl md:text-5xl font-light text-teal tracking-tight">Top 60</p>
+                <p class="text-sm text-gray-500 mt-2 font-light">TikTok Shop rank</p>
+              </div>
+              <div>
+                <p class="text-4xl md:text-5xl font-light text-teal tracking-tight">10+</p>
+                <p class="text-sm text-gray-500 mt-2 font-light">Active channels</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
-  <!-- Stats -->
-  <div class="py-20 md:py-28 bg-gray-50">
+  <!-- Platform Logos / Credibility Strip -->
+  <div class="py-16 md:py-20 bg-gray-50">
     <div class="px-6 md:px-16 lg:px-24 max-w-[1600px] mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
-        <div>
-          <p class="text-4xl md:text-5xl lg:text-6xl font-light text-navy tracking-tight">10K+</p>
-          <p class="text-sm text-gray-500 mt-2 font-light">eBay reviews</p>
-        </div>
-        <div>
-          <p class="text-4xl md:text-5xl lg:text-6xl font-light text-teal tracking-tight">#1</p>
-          <p class="text-sm text-gray-500 mt-2 font-light">StockX apparel seller</p>
-        </div>
-        <div>
-          <p class="text-4xl md:text-5xl lg:text-6xl font-light text-navy tracking-tight">100K+</p>
-          <p class="text-sm text-gray-500 mt-2 font-light">Units monthly</p>
-        </div>
-        <div>
-          <p class="text-4xl md:text-5xl lg:text-6xl font-light text-teal tracking-tight">#52</p>
-          <p class="text-sm text-gray-500 mt-2 font-light">TikTok Shop ranking</p>
-        </div>
+      <p class="text-xs tracking-widest uppercase text-gray-400 font-medium text-center mb-10">Active Across Major Platforms</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <span class="text-xl md:text-2xl font-light text-gray-400 tracking-tight">StockX</span>
+        <span class="text-xl md:text-2xl font-light text-gray-400 tracking-tight">TikTok Shop</span>
+        <span class="text-xl md:text-2xl font-light text-gray-400 tracking-tight">eBay</span>
+        <span class="text-xl md:text-2xl font-light text-gray-400 tracking-tight">Whatnot</span>
       </div>
     </div>
   </div>
@@ -157,7 +189,7 @@
           <nav class="flex flex-col gap-2.5">
             <a href="/needs" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Your Needs</a>
             <a href="/impact" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Our Impact</a>
-            <a href="/firm" class="text-sm text-white/70 hover:text-white transition-colors duration-150">The Firm</a>
+            <a href="/firm" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Our Firm</a>
           </nav>
         </div>
 
@@ -165,8 +197,8 @@
         <div>
           <p class="text-xs tracking-wider text-white/40 mb-5">Services</p>
           <nav class="flex flex-col gap-2.5">
-            <a href="/needs?tab=manufacturing" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Manufacturing</a>
-            <a href="/needs?tab=distribution" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Distribution</a>
+            <a href="/needs" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Manufacturing</a>
+            <a href="/needs" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Distribution</a>
           </nav>
         </div>
 
@@ -174,7 +206,8 @@
         <div>
           <p class="text-xs tracking-wider text-white/40 mb-5">Connect</p>
           <nav class="flex flex-col gap-2.5">
-            <a href="mailto:contact@cgoperatinggroup.com" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Email</a>
+            <a href="/contact" class="text-sm text-white/70 hover:text-white transition-colors duration-150">Contact</a>
+            <a href="https://x.com" class="text-sm text-white/70 hover:text-white transition-colors duration-150">X</a>
             <a href="https://linkedin.com" class="text-sm text-white/70 hover:text-white transition-colors duration-150">LinkedIn</a>
           </nav>
         </div>
@@ -187,7 +220,10 @@
       <div class="px-6 md:px-16 lg:px-24 max-w-[1600px] mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
           <p class="text-xs text-white/40">© 2025 CG Operating Group</p>
-          <p class="text-xs text-white/40">Manufacturing & Distribution Infrastructure</p>
+          <div class="flex items-center gap-4">
+            <a href="/privacy" class="text-xs text-white/40 hover:text-white/70 transition-colors duration-150">Privacy Policy</a>
+            <a href="/terms" class="text-xs text-white/40 hover:text-white/70 transition-colors duration-150">Terms of Service</a>
+          </div>
         </div>
       </div>
     </div>

@@ -20,12 +20,12 @@
 
   <nav class="hidden md:flex items-center gap-8 text-sm font-light">
     <a href="/needs" class="hover:text-teal transition-colors duration-300">Your Needs</a>
-    <a href="/impact" class="hover:text-teal transition-colors duration-300">Impact</a>
-    <a href="/firm" class="hover:text-teal transition-colors duration-300">Firm</a>
+    <a href="/impact" class="hover:text-teal transition-colors duration-300">Our Impact</a>
+    <a href="/firm" class="hover:text-teal transition-colors duration-300">Our Firm</a>
   </nav>
 
   <a href="/contact" class="px-5 py-2.5 border border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 z-10 text-sm font-normal tracking-wide">
-    Contact
+    Get in Touch
   </a>
   </div>
 </header>
